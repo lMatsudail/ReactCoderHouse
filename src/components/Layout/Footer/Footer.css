@@ -1,6 +1,6 @@
 .pie-pagina {
-    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
-    color: white;
+    background: linear-gradient(135deg, #ff512f 0%, #f09819 100%);
+    color: #fffbe6;
     padding: 3rem 0 1rem 0;
     margin-top: auto;
 }
@@ -15,20 +15,20 @@
 }
 
 .seccion-footer h3 {
-    color: #3498db;
+    color: #d7263d;
     font-size: 1.8rem;
     margin-bottom: 1rem;
 }
 
 .seccion-footer h4 {
-    color: #ecf0f1;
+    color: #ffb400;
     font-size: 1.2rem;
     margin-bottom: 1rem;
 }
 
 .seccion-footer p {
     line-height: 1.6;
-    color: #bdc3c7;
+    color: #fffbe6;
 }
 
 .info-contacto p {
@@ -38,13 +38,13 @@
     margin-bottom: 0.5rem;
 }
 
-.enlaces-footer {
-    list-style: none;
-    padding: 0;
+.enlaces-footer a {
+    color: #fffbe6;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
-
-.enlaces-footer li {
-    margin-bottom: 0.5rem;
+.enlaces-footer a:hover {
+    color: #ffb400;
 }
 
 .enlaces-footer a {
