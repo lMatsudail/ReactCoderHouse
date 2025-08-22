@@ -1,25 +1,39 @@
-import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { productsmock } from '../../../ProductsMock';
+import { useProduct } from '../../../hooks/useFirestore';
 import ItemDetail from '../../ItemDetail/ItemDetail';
 
 const ItemDetailContainer = () => {
   const { itemId } = useParams();
-  const [product, setProduct] = useState(null);
+  const { product, loading, error } = useProduct(itemId);
 
-  useEffect(() => {
-    new Promise((resolve) => {
-      setTimeout(() => {
-        resolve(productsmock.find(p => p.id === itemId));
-      }, 1000);
-    }).then(data => setProduct(data));
-  }, [itemId]);
+  if (loading) {
+    return (
+      <div style={{ textAlign: 'center', padding: '4rem' }}>
+        <h3>Cargando producto...</h3>
+        <div className="spinner"></div>
+      </div>
+    );
+  }
 
-  return (
-    <div>
-      {product ? <ItemDetail product={product} /> : <p>Cargando...</p>}
-    </div>
-  );
+  if (error) {
+    return (
+      <div style={{ textAlign: 'center', padding: '4rem' }}>
+        <h3>❌ Error al cargar el producto</h3>
+        <p>{error}</p>
+      </div>
+    );
+  }
+
+  if (!product) {
+    return (
+      <div style={{ textAlign: 'center', padding: '4rem' }}>
+        <h3>📦 Producto no encontrado</h3>
+        <p>El producto que buscas no existe.</p>
+      </div>
+    );
+  }
+
+  return <ItemDetail product={product} />;
 };
 
 export default ItemDetailContainer;

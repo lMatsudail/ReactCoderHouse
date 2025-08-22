@@ -1,12 +1,17 @@
-import{ FaShoppingCart } from 'react-icons/fa'
+import { FaShoppingCart } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 import './CartWidget.css'
+import { useCart } from '../../../context/useCart'
 
 const CartWidget = () => {
+  const { getTotalQuantity } = useCart();
+  const totalQuantity = getTotalQuantity();
+
   return (
-    <div className="widget-carrito">
+    <Link to="/cart" className="widget-carrito">
       <FaShoppingCart className="icono-carrito"/>
-      <span className="contador-carrito">3</span>
-    </div>
+      {totalQuantity > 0 && <span className="contador-carrito">{totalQuantity}</span>}
+    </Link>
   )
 }
 

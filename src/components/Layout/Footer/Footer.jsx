@@ -7,12 +7,12 @@ const Footer = () => {
       <div className="contenedor-footer">
         <div className="seccion-footer">
           <h3>FullMordisco</h3>
-          <p>Comida rápida hecha con pasión. Hamburguesas, pizzas, perros calientes y arepas rellenas, directo a tu puerta.</p>
+          <p>Comida rápida casera. Hamburguesas, pizzas y más.</p>
         </div>
         <div className="seccion-footer">
           <h4>Contacto</h4>
           <div className="info-contacto">
-            <p><FaPhone /> +57 310 123 45 67</p>
+            <p><FaPhone /> +57 314 460 7465</p>
             <p><FaEnvelope /> fullmordisco@gmail.com</p>
             <p><FaMapMarkerAlt /> Bogotá, Colombia</p>
           </div>

@@ -12,7 +12,6 @@ const NavBar = () => {
           <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
             <h1>FullMordisco</h1>
           </Link>
-          <span className="subtitulo-logo">Cocina oculta de comida rápida</span>
         </div>
         <ul className="menu-nav">
           <li>
@@ -37,9 +36,7 @@ const NavBar = () => {
             <Link to="/category/Adicionales" className="enlace-nav"><FaPlus /> Adicionales</Link>
           </li>
         </ul>
-        <Link to="/cart">
-          <CartWidget />
-        </Link>
+        <CartWidget />
       </div>
     </nav>
   );

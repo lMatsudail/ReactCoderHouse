@@ -1,0 +1,253 @@
+.checkout-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+  min-height: 70vh;
+}
+
+.checkout-title {
+  text-align: center;
+  color: #d32f2f;
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+}
+
+.checkout-content {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 3rem;
+  align-items: start;
+}
+
+.checkout-form {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.checkout-form h3 {
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-size: 1.4rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #555;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.form-group input.error,
+.form-group textarea.error {
+  border-color: #dc3545;
+}
+
+.error-message {
+  color: #dc3545;
+  font-size: 0.85rem;
+  margin-top: 0.3rem;
+  display: block;
+}
+
+.submit-order-btn {
+  width: 100%;
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 1rem;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-order-btn:hover:not(:disabled) {
+  background: #218838;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(40, 167, 69, 0.3);
+}
+
+.submit-order-btn:disabled {
+  background: #6c757d;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.order-summary {
+  background: #f8f9fa;
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+  position: sticky;
+  top: 2rem;
+}
+
+.order-summary h3 {
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-size: 1.4rem;
+}
+
+.summary-items {
+  margin-bottom: 1.5rem;
+}
+
+.summary-item {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 1rem;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid #e9ecef;
+  align-items: center;
+}
+
+.summary-item:last-child {
+  border-bottom: none;
+}
+
+.item-name {
+  font-weight: 500;
+  color: #333;
+}
+
+.item-quantity {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.item-price {
+  font-weight: bold;
+  color: #007bff;
+}
+
+.summary-total {
+  border-top: 2px solid #ddd;
+  padding-top: 1rem;
+}
+
+.total-line {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.8rem;
+  color: #555;
+}
+
+.total-line.final {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  border-top: 1px solid #ddd;
+  padding-top: 0.8rem;
+}
+
+/* Success and Empty States */
+.order-success,
+.empty-cart {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.order-success h2 {
+  color: #28a745;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.order-details {
+  background: #d4edda;
+  padding: 1.5rem;
+  border-radius: 6px;
+  border: 1px solid #c3e6cb;
+  margin-bottom: 2rem;
+}
+
+.order-details p {
+  margin-bottom: 0.8rem;
+  color: #155724;
+}
+
+.order-details p:last-child {
+  margin-bottom: 0;
+}
+
+.back-home-btn,
+.continue-shopping-btn {
+  display: inline-block;
+  background: #007bff;
+  color: white;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.back-home-btn:hover,
+.continue-shopping-btn:hover {
+  background: #0056b3;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+  text-decoration: none;
+  color: white;
+}
+
+.empty-cart h2 {
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.empty-cart p {
+  color: #888;
+  margin-bottom: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .checkout-container {
+    margin: 1rem;
+    padding: 1rem;
+  }
+  
+  .checkout-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .order-summary {
+    position: static;
+    order: -1;
+  }
+  
+  .summary-item {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    text-align: center;
+  }
+}

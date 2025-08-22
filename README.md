@@ -1,12 +1,69 @@
-# React + Vite
+# FullMordisco - E-commerce React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Proyecto de e-commerce desarrollado con React para el curso de CoderHouse.
 
-Currently, two official plugins are available:
+## Descripción
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Aplicación web de comida rápida "FullMordisco" donde los usuarios pueden:
+- Ver categorías de productos
+- Navegar por productos de cada categoría  
+- Ver detalles de productos
+- Agregar productos al carrito
+- Finalizar compra con formulario
 
-## Expanding the ESLint configuration
+## Tecnologías
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React 18
+- React Router DOM
+- Firebase/Firestore
+- Vite
+- CSS modules
+
+## Instalación
+
+```bash
+npm install
+npm run dev
+```
+
+## Estructura del proyecto
+
+```
+src/
+├── components/          # Componentes reutilizables
+├── context/            # Context API para el carrito
+├── hooks/              # Custom hooks
+├── services/           # Conexión con Firebase
+└── data/               # Datos de productos
+```
+
+## Funcionalidades
+
+- **Home**: Muestra categorías principales
+- **Categorías**: Lista productos por categoría
+- **Detalle**: Información completa del producto
+- **Carrito**: Gestión de productos seleccionados
+- **Checkout**: Formulario para finalizar compra
+
+## Base de datos
+
+Los productos están almacenados en Firebase Firestore con las siguientes categorías:
+- Pizzas (10 productos)
+- Hamburguesas (3 productos)  
+- Perros (2 productos)
+- Platos Especiales (2 productos)
+- Arepas Rellenas (3 productos)
+- Salchipapa (1 producto)
+- Adicionales (5 productos)
+
+## Componentes principales
+
+- `NavBar`: Navegación principal
+- `ItemListContainer`: Contenedor de listas de productos
+- `ItemDetail`: Detalle individual de producto
+- `CartWidget`: Ícono del carrito con contador
+- `Checkout`: Formulario de finalización de compra
+
+## Autor
+
+Proyecto desarrollado por Jose Luis Florez Casas como trabajo final del curso React JS en CoderHouse.
